@@ -1,15 +1,13 @@
+const SIZE = 8;
 let board = "";
 
-for (let row = 1; row <= 8; row++)
-{
-    let isEven = (row % 2 == 0);
-
-    for (let column = 1; column <= 8; column++)
-    {
-        if (isEven)
-            board += (column % 2 == 0) ? " " : "#";
+for (let row = 0; row < SIZE; row++) {
+    
+    for (let column = 0; column < SIZE; column++) {
+        if ((row + column) % 2 == 0)
+            board += " ";
         else
-            board += (column % 2 == 0) ? "#" : " ";
+            board += "#";
     }
 
     board += "\n";
